@@ -1,0 +1,72 @@
+### Register user
+POST http://localhost:8080/auth/register
+Accept: */*
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "Password1!",
+  "phone": "+12345678901",
+  "homeAddress": "https://home.example.com",
+  "officeAddress": "https://office.example.com",
+  "preferredArrivalStart": "08:00:00",
+  "preferredArrivalEnd": "09:00:00",
+  "flexibilityMinutes": 15,
+  "flexibilityKm": 5.0,
+  "role": "DRIVER",
+  "availableSeats": 3,
+  "costPer100KmEUR": 10.5
+}
+
+### Register passenger
+POST http://localhost:8080/auth/register
+Accept: */*
+Content-Type: application/json
+
+{
+"name": "John Doe",
+"email": "john.doe@example.com",
+"password": "Password1!",
+"phone": "+12345678901",
+"homeAddress": "https://home.example.com",
+"officeAddress": "https://office.example.com",
+"preferredArrivalStart": "08:00:00",
+"preferredArrivalEnd": "09:00:00",
+"flexibilityMinutes": 15,
+"flexibilityKm": 5.0,
+"role": "PASSENGER",
+"availableSeats": 3,
+"costPer100KmEUR": 10.5
+}
+
+### Register passenger
+POST http://localhost:8080/auth/register
+Accept: */*
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "Password1!",
+  "phone": "+12345678901",
+  "homeAddress": "https://home.example.com",
+  "officeAddress": "https://office.example.com",
+  "preferredArrivalStart": "08:00:00",
+  "preferredArrivalEnd": "09:00:00",
+  "flexibilityMinutes": 15,
+  "flexibilityKm": 5.0,
+  "role": "PASSENGER",
+  "availableSeats": 3,
+  "costPer100KmEUR": 10.5
+}
+
+### Login user
+POST http://localhost:8080/auth/login
+Accept: */*
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "Password1!"
+}

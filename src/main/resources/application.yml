@@ -1,8 +1,27 @@
+jwt:
+  secret: JuuWgqPZb7DCL3Nk5I4LDjyFMgWJ1BnUEjly+zdYd+4=
+
 spring:
   application:
     name: api-gateway
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:5173"
+              - "http://localhost:3000"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
       routes:
         - id: user-auth
           uri: lb://USER-SERVICE
@@ -20,3 +39,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+
